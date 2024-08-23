@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "NouvelR";
+  src: url("/fonts/NouvelRBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NouvelR";
+  src: url("/fonts/NouvelRBook.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NouvelR";
+  src: url("/fonts/NouvelRExtrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NouvelR";
+  src: url("/fonts/NouvelRLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NouvelR";
+  src: url("/fonts/NouvelRRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NouvelR";
+  src: url("/fonts/NouvelRSemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Utilisation de la police */
+body {
+  font-family: "NouvelR", sans-serif !important;
+}
