@@ -26,12 +26,16 @@ export default function IndexPage() {
           backgroundRepeat: "repeat",
         }}
       >
-        <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:1/2 h-[75vh] flex flex-col items-center justify-center pb-20">
+        <div
+          className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:1/2 h-[75vh] flex flex-col items-center justify-center pb-20 pl-10 pr-10 sm:pl-10 sm:pr-10 md:pl-10 md:pr-10 lg:pl-0 lg:pr-0 xl:pl-0 xl:pr-0"
+          style={{
+            overflow: "hidden",
+          }}
+        >
           <div
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center p-10"
             style={{
               backgroundColor: "rgba(255,255,255,0.05)",
-              padding: "4rem",
               borderRadius: "1rem",
               backdropFilter: "blur(10px)",
               zIndex: 2,
@@ -43,6 +47,7 @@ export default function IndexPage() {
                 fontFamily: "NouvelR",
                 fontSize: "3rem",
                 zIndex: 1,
+                textAlign: "center",
               }}
             >
               Milan <b>CAMUS</b>
@@ -72,6 +77,7 @@ export default function IndexPage() {
               bottom: "2vh",
               left: "-2vh",
               opacity: 0.3,
+              overflow: "hidden",
             }}
           />
           <motion.img
