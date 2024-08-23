@@ -5,8 +5,9 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body
-        className="min-h-screen w-full antialiased overflow-x-hidden"
+        className="min-h-screen w-full antialiased overflow-x-hidden max-w-screen"
         style={{
+          maxWidth: "100vw",
           backgroundColor: "#000e24",
         }}
       >
