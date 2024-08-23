@@ -1,0 +1,47 @@
+{
+  "welcome": "Bienvenue dans mon application !",
+  "button": "Cliquez ici",
+  "global": {
+    "job": "Développeur fullstack"
+  },
+  "login": {
+    "title": "Connexion",
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "Entrez votre adresse e-mail"
+    },
+    "password": {
+      "label": "Mot de passe",
+      "placeholder": "Entrez votre mot de passe"
+    },
+    "submit": "Se connecter",
+    "submitting": "Connexion...",
+    "errors": {
+      "ERROR_CODE_INPUT_ERROR": "Veuillez vérifier les informations saisies",
+      "default": "Une erreur est survenue, veuillez réessayer plus tard..."
+    }
+  },
+  "admin": {
+    "title": "Administration",
+    "navbar": {
+      "logout": "Déconnexion"
+    },
+    "skills": {
+      "title": "Compétences",
+      "add": "Ajouter",
+      "delete": "Supprimer ?",
+      "update": "Modifier",
+      "empty": "Aucune compétence trouvée...",
+      "inputs": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Nom de la compétence"
+        },
+        "image": {
+          "label": "Niveau",
+          "placeholder": "URL de l'image"
+        }
+      }
+    }
+  }
+}
