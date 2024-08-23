@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body
-        className="min-h-screen w-full antialiased"
+        className="min-h-screen w-full antialiased overflow-x-hidden"
         style={{
           backgroundColor: "#000e24",
         }}
