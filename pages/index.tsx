@@ -5,6 +5,8 @@ import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import line1Anim from "@/public/animations/lines_1.json";
 
 export default function IndexPage() {
   const { t } = useTranslation();
@@ -74,7 +76,7 @@ export default function IndexPage() {
               maxHeight: "500px",
               zIndex: 0,
               position: "absolute",
-              bottom: "2vh",
+              top: "15vh",
               left: "-2vh",
               opacity: 0.3,
               overflow: "hidden",
@@ -104,17 +106,21 @@ export default function IndexPage() {
             }}
           />
         </div>
-        <div className="hidden sm:hidden md:block md:w-1/2  lg:w-1/2  xl:1/2 h-[75vh] flex align-end">
+        <div
+          className="hidden sm:hidden md:block md:w-1/2  lg:w-1/2  xl:1/2 h-[75vh]"
+          style={{
+            display: "flex",
+            flexDirection: "column-reverse",
+          }}
+        >
           <img
             src="memoji.png"
             style={{
               objectFit: "contain",
               height: "40vw",
               maxHeight: "500px",
-              zIndex: 0,
-              position: "absolute",
-              bottom: "4rem",
-              right: "2rem",
+              float: "right",
+              marginBottom: "10vh",
             }}
           />
         </div>
@@ -127,9 +133,43 @@ export default function IndexPage() {
             position: "absolute",
             height: "25vh",
             width: "100vw",
-            bottom: 0,
+            top: "50vh",
           }}
-        ></div>
+        />
+      </div>
+      <div className="flex flex-wrap overflow-hidden w-[100vw]" style={{}}>
+        <div
+          className="w-full h-[15vh]"
+          style={{
+            zIndex: 1,
+            backgroundImage:
+              "linear-gradient(0deg, rgba(0,0,0,0) 0%, #000e24 60%)",
+            position: "absolute",
+            height: "25vh",
+            top: "65vh",
+            width: "100vw",
+          }}
+        />
+        <Lottie
+          animationData={line1Anim}
+          loop={false}
+          color="red"
+          interactivity={{
+            mode: "scroll",
+            actions: [
+              {
+                visibility: [0, 0.2],
+                type: "stop",
+                frames: [0],
+              },
+              {
+                visibility: [0.2, 0.5],
+                type: "seek",
+                frames: [0, 300],
+              },
+            ],
+          }}
+        />
       </div>
     </DefaultLayout>
   );
