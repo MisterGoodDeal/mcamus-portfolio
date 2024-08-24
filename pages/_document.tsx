@@ -9,7 +9,6 @@ export default function Document() {
         style={{
           maxWidth: "100vw",
           backgroundColor: "#000e24",
-          height: "400vh",
         }}
       >
         <Main />
