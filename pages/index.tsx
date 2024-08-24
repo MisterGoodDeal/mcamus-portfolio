@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import line1Anim from "@/public/animations/lines_1.json";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import TypingAnimation from "@/components/magicui/typing-animation";
 
 export default function IndexPage() {
   const { t } = useTranslation();
@@ -35,7 +37,7 @@ export default function IndexPage() {
           }}
         >
           <div
-            className="flex flex-col items-center justify-center p-10"
+            className="relative flex flex-col items-center justify-center p-10"
             style={{
               backgroundColor: "rgba(255,255,255,0.05)",
               borderRadius: "1rem",
@@ -43,6 +45,7 @@ export default function IndexPage() {
               zIndex: 2,
             }}
           >
+            <BorderBeam colorFrom="#01193F" />
             <h1
               className={title({ color: "violet", size: "lg" })}
               style={{
@@ -55,7 +58,7 @@ export default function IndexPage() {
               Milan <b>CAMUS</b>
             </h1>
             <Code color="secondary" className="mt-3">
-              {t("global.job")}
+              <TypingAnimation className="text-small" text={t("global.job")} />
             </Code>
           </div>
           <motion.img
@@ -134,12 +137,13 @@ export default function IndexPage() {
             height: "25vh",
             width: "100vw",
             top: "50vh",
+            backgroundColor: "rgba(0,255,0,0.5)",
           }}
         />
       </div>
       <div className="flex flex-wrap overflow-hidden w-[100vw]" style={{}}>
         <div
-          className="w-full h-[15vh]"
+          className="w-full h-[15vh] hidden sm:hidden md:block"
           style={{
             zIndex: 1,
             backgroundImage:
@@ -154,6 +158,7 @@ export default function IndexPage() {
           animationData={line1Anim}
           loop={false}
           color="red"
+          height={"50vh"}
           interactivity={{
             mode: "scroll",
             actions: [
@@ -170,6 +175,61 @@ export default function IndexPage() {
             ],
           }}
         />
+        <div
+          className="w-full flex relative top-[-50vh]"
+          style={{
+            zIndex: 2,
+          }}
+        >
+          <div className="hidden sm:hidden md:block md:w-1/2  lg:w-1/2  xl:1/2 h-[50vh]" />
+          <div
+            className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:1/2 h-[50vh] flex flex-col items-center justify-center"
+            style={{
+              backgroundColor: "rgba(255,0,0,.5)",
+              display: "flex",
+              flexDirection: "column-reverse",
+              zIndex: 9999,
+            }}
+          >
+            <div
+              className="relative flex flex-col items-center justify-center p-10"
+              style={{
+                backgroundColor: "rgba(255,255,255,0.05)",
+                borderRadius: "1rem",
+                backdropFilter: "blur(10px)",
+                zIndex: 9999,
+              }}
+            >
+              <BorderBeam colorFrom="#01193F" />
+              <h2
+                className={title({ color: "violet", size: "lg" })}
+                style={{
+                  fontFamily: "NouvelR",
+                  fontSize: "2rem",
+                  zIndex: 1,
+                  textAlign: "center",
+                  fontWeight: "bold",
+                }}
+              >
+                {t("global.education.dut.title")}
+              </h2>
+              <Code color="secondary" className="mt-3">
+                {t("global.education.dut.location")} •{" "}
+                {t("global.education.dut.date")}
+              </Code>
+              <ul
+                style={{
+                  listStyleType: "initial",
+                }}
+              >
+                <li>{t("global.education.dut.details.1")}</li>
+                <li>{t("global.education.dut.details.2")}</li>
+                <li>{t("global.education.dut.details.3")}</li>
+                <li>{t("global.education.dut.details.4")}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </DefaultLayout>
   );
