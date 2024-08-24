@@ -19,7 +19,7 @@ export default function DefaultLayout({
       }}
     >
       <Head />
-      <main className="container flex-grow">{children}</main>
+      <main className="">{children}</main>
     </div>
   );
 }
