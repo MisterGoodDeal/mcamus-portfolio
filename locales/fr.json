@@ -2,7 +2,40 @@
   "welcome": "Bienvenue dans mon application !",
   "button": "Cliquez ici",
   "global": {
-    "job": "Développeur fullstack"
+    "job": "Développeur fullstack",
+    "education": {
+      "dut": {
+        "title": "DUT Informatique",
+        "location": "IUT de Montreuil",
+        "date": "2018 - 2020",
+        "details": {
+          "1": "Site en PHP/HTML/CSS/JS from scratch",
+          "2": "Jeu vidéo dans le style de Terraria from scratch",
+          "3": "Site web sur un sujet libre au choix de l’étudiant",
+          "4": "Stage de minimum 3 mois"
+        }
+      },
+      "bachelor": {
+        "title": "Bachelor — Ingénierie du Web",
+        "location": "ESGI Paris",
+        "date": "2020 - 2021",
+        "details": [
+          "Préparation du bachelor informatique spécialé dans l’ingénierie du web",
+          "Développement d’une application type CMS style Symfony, en architecture MVC implémentant un ORM"
+        ]
+      },
+      "master2": {
+        "title": "Master 2 — Ingénierie du Web",
+        "location": "ESGI Paris",
+        "date": "2021 - 2023",
+        "details": [
+          "Obtention du diplôme d’ingénieur informatique",
+          "Projet de développement d’une application front et back fonctionnant en microservices avec intégration de solutions de déploiement continu et de cloud computing",
+          "Projet de création d’un cours articulé autour d’un écrit de 100.000 caractères et d’une heure et demi de vidéos",
+          "Projet de création d’une stack backend en API Platform et d’un front en Vue.JS"
+        ]
+      }
+    }
   },
   "login": {
     "title": "Connexion",
